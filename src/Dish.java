@@ -17,6 +17,10 @@ public class Dish {
         return count;
     }
 
+    public double getTotal() {
+        return this.getItem().getPrice() * this.getCount();
+    }
+
     public static void test() {
         Dish dish0 = new Dish("ITEM0001 x 2");
         System.out.println(dish0.getCount());
