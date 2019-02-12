@@ -37,6 +37,17 @@ public class Item {
         return found;
     }
 
+    public static void initAllItems() {
+        Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
+        Item item1 = new Item("ITEM0013", "肉夹馍", 6.00f);
+        Item item2 = new Item("ITEM0022", "凉皮", 8.00f);
+        Item item3 = new Item("ITEM0030", "冰锋", 2.00f);
+        allItems.add(item0);
+        allItems.add(item1);
+        allItems.add(item2);
+        allItems.add(item3);
+    }
+
     public static void test() {
         Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
         Item item1 = new Item("ITEM0013", "肉夹馍", 6.00f);
