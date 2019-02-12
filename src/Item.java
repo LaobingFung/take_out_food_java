@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -24,7 +25,12 @@ public class Item {
         return this.price;
     }
 
-    public static Vector<Item> allItems = new Vector<Item>();
+    private static Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
+    private static Item item1 = new Item("ITEM0013", "肉夹馍", 6.00f);
+    private static Item item2 = new Item("ITEM0022", "凉皮", 8.00f);
+    private static Item item3 = new Item("ITEM0030", "冰锋", 2.00f);
+
+    public static Vector<Item> allItems = new Vector<Item>(Arrays.asList(new Item[]{item0, item1, item2, item3}));
 
     public static Item getItem(String id) {
         Item found = new Item("ITEM0000", "NOT FOUND", 0.0f);

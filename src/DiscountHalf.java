@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Vector;
 
 public class DiscountHalf extends Promotion {
@@ -5,7 +6,10 @@ public class DiscountHalf extends Promotion {
         super("指定菜品半价");
     }
 
-    public static Vector<Item> specialList = new Vector<Item>();
+    private static Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
+    private static Item item1 = new Item("ITEM0022", "凉皮", 8.00f);
+
+    public static Vector<Item> specialList = new Vector<Item>(Arrays.asList(new Item[]{item0, item1}));
 
     public static void initSpecialList() {
         Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
