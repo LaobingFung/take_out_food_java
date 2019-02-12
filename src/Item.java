@@ -5,6 +5,7 @@ public class Item {
     private String id;
     private String name;
     private float price;
+
     public Item(String id, String name, float price) {
         this.id = id;
         this.name = name;
@@ -23,7 +24,18 @@ public class Item {
         return this.price;
     }
 
-    public static Vector allItems = new Vector();
+    public static Vector<Item> allItems = new Vector<Item>();
+
+    public static Item getItem(String id) {
+        Item found = new Item("ITEM0000", "NOT FOUND", 0.0f);
+        for(Item item : allItems){
+            if(item.getId().equals(id)) {
+                found = item;
+                break;
+            }
+        }
+        return found;
+    }
 
     public static void test() {
         Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
@@ -35,12 +47,13 @@ public class Item {
         allItems.add(item2);
         allItems.add(item3);
         Enumeration<Item> enume = allItems.elements();
-        while(enume.hasMoreElements()) {
+        while (enume.hasMoreElements()) {
             Item element = enume.nextElement();
             System.out.print(element.getId() + ' ');
             System.out.print(element.getName() + ' ');
             System.out.print(element.getPrice());
             System.out.print('\n');
         }
+        System.out.println(getItem("ITEM0013").getName());
     }
 }
