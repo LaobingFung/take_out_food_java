@@ -22,6 +22,14 @@ public class Order {
         return total;
     }
 
+    public StringBuffer printDetail() {
+        StringBuffer detail = new StringBuffer("");
+        for(Dish dish : this.order) {
+            detail.append(dish.printDetail() + "\n");
+        }
+        return detail;
+    }
+
     public static void test() {
         String[] input = {"ITEM0001 x 1", "ITEM0013 x 2", "ITEM0022 x 1"};
         Order order = new Order(input);
