@@ -1,3 +1,9 @@
+package main.java.fung.service;
+
+import main.java.fung.model.Dish;
+import main.java.fung.model.Item;
+import main.java.fung.model.Order;
+
 import java.util.Arrays;
 import java.util.Vector;
 

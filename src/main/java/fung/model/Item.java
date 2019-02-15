@@ -1,3 +1,5 @@
+package main.java.fung.model;
+
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;

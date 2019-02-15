@@ -1,3 +1,7 @@
+package main.java.fung.service;
+
+import main.java.fung.model.Order;
+
 public class Minus6 extends Promotion{
     public Minus6() {
         super("满30减6元");

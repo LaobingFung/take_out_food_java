@@ -1,3 +1,5 @@
+package main.java.fung.model;
+
 import java.lang.String;
 
 public class Dish {

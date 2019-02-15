@@ -1,3 +1,9 @@
+package main.java.fung.service;
+
+import main.java.fung.model.Order;
+import main.java.fung.service.DiscountHalf;
+import main.java.fung.service.Minus6;
+
 public class BestCharge {
 
     public static String getBill(String[] inputStr) {

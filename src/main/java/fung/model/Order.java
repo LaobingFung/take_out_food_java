@@ -1,3 +1,5 @@
+package main.java.fung.model;
+
 import java.lang.String;
 import java.util.Vector;
 

@@ -1,3 +1,7 @@
+package main.java.fung.service;
+
+import main.java.fung.model.Order;
+
 public abstract class Promotion {
     private String type;
 
