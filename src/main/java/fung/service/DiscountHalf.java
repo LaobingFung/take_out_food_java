@@ -4,7 +4,6 @@ import main.java.fung.model.Dish;
 import main.java.fung.model.Item;
 import main.java.fung.model.Order;
 
-import java.util.Arrays;
 import java.util.Vector;
 
 public class DiscountHalf extends Promotion {
@@ -12,17 +11,7 @@ public class DiscountHalf extends Promotion {
         super("指定菜品半价");
     }
 
-    private static Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
-    private static Item item1 = new Item("ITEM0022", "凉皮", 8.00f);
-
-    public static Vector<Item> specialList = new Vector<Item>(Arrays.asList(new Item[]{item0, item1}));
-
-    public static void initSpecialList() {
-        Item item0 = new Item("ITEM0001", "黄焖鸡", 18.00f);
-        Item item1 = new Item("ITEM0022", "凉皮", 8.00f);
-        specialList.add(item0);
-        specialList.add(item1);
-    }
+    public static Vector<Item> specialList = new Vector<Item>();
 
     public static Vector<String> getSpecialItemNames(Order order) {
         Vector<String> specialItemNames = new Vector<String>();
@@ -55,9 +44,9 @@ public class DiscountHalf extends Promotion {
         DiscountHalf promotion1 = new DiscountHalf();
         System.out.println(promotion1.getType());
         System.out.println(promotion1.computeDiscount(order));
-//        for(String str : promotion1.getSpecialItemNames(order)) {
-//            System.out.println(str);
-//        }
+        for(String str : promotion1.getSpecialItemNames(order)) {
+            System.out.println(str);
+        }
         System.out.println(String.join(",", promotion1.getSpecialItemNames(order)));
     }
 }
