@@ -1,18 +1,21 @@
 package main.java.fung;
 
+import java.lang.String;
+
+import java.util.Scanner;
+
 import static main.java.fung.service.BestCharge.getBill;
 
 public class Main {
     public static void main(String[] args) {
         Tool.initAllItems();
         Tool.initSpecialItems();
-        String[] input0 = {"ITEM0001 x 1", "ITEM0013 x 2", "ITEM0022 x 1"};
-        System.out.print(getBill(input0));
-        System.out.println();
-        String[] input1 = {"ITEM0013 x 4", "ITEM0022 x 1"};
-        System.out.print(getBill(input1));
-        System.out.println();
-        String[] input2 = {"ITEM0013 x 4"};
-        System.out.print(getBill(input2));
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请点餐：");
+        if (scan.hasNextLine()) {
+            String strInput = scan.nextLine();
+            System.out.println(getBill(strInput.split(", ")));
+        }
+        scan.close();
     }
 }
